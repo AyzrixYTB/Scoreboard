@@ -31,7 +31,7 @@ class PurePerms {
      * @return string
      */
     public static function getPlayerRank(Player $player) : string{
-        $group = self::getPlugin()->getUserDataMgr()->getGroup($player, $player->getLevel()->getName());
+        $group = self::getPlugin()->getUserDataMgr()->getGroup($player);
         return $group;
     }
 
