@@ -27,6 +27,14 @@ options:
   SkyBlock: false
   # {device}
   SeeDevice: false
+  # {bounty}
+  Bounty: false
+  # {prisons_rank} {prisons_prestige}
+  Prisons: false
+  # {onlinetime_session} {onlinetime_total}
+  OnlineTime: false
+  # {combatlogger_time}
+  CombatLogger: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z}
 

@@ -10,4 +10,8 @@ softdepend:
   - PurePerms
   - SkyBlock
   - SeeDevice
+  - Bounty
+  - Prisons
+  - OnlineTime
+  - CombatLogger
 author: Ayzrix

@@ -22,6 +22,7 @@ class Main extends PluginBase {
 
     /** @var Main $instance */
     private static $instance;
+
     public static $piggyfaction = false;
     public static $factionspro = false;
     public static $simplefaction = false;
@@ -29,11 +30,20 @@ class Main extends PluginBase {
     public static $pureperms = false;
     public static $skyblock = false;
     public static $seedevice = false;
+    public static $bounty = false;
+    public static $prison = false;
+    public static $combatlogger = false;
+    public static $onlinetime = false;
 
     public function onEnable(){
         $this->saveDefaultConfig();
         self::$instance = $this;
+        $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
+        $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), Utils::getIntoConfig("update_time"));
+        $this->checkDepencies();
+    }
 
+    private function checkDepencies(): void {
         if (Utils::getIntoConfig("options")["PiggyFaction"] === true) {
             $piggyfaction = $this->getServer()->getPluginManager()->getPlugin("PiggyFactions");
             if(is_null($piggyfaction)) {
@@ -97,8 +107,41 @@ class Main extends PluginBase {
             } else self::$seedevice = true;
         }
 
-        $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
-        $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), Utils::getIntoConfig("update_time"));
+        if (Utils::getIntoConfig("options")["Bounty"] === true) {
+            $bounty = $this->getServer()->getPluginManager()->getPlugin("Bounty");
+            if(is_null($bounty)) {
+                $this->getLogger()->notice("Please download a valid version of Bounty");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$bounty = true;
+        }
+
+        if (Utils::getIntoConfig("options")["Prisons"] === true) {
+            $prison = $this->getServer()->getPluginManager()->getPlugin("Prisons");
+            if(is_null($prison)) {
+                $this->getLogger()->notice("Please download a valid version of Prisons");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$prison = true;
+        }
+
+        if (Utils::getIntoConfig("options")["OnlineTime"] === true) {
+            $onlinetime = $this->getServer()->getPluginManager()->getPlugin("OnlineTime");
+            if(is_null($onlinetime)) {
+                $this->getLogger()->notice("Please download a valid version of OnlineTime");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$onlinetime = true;
+        }
+
+        if (Utils::getIntoConfig("options")["CombatLogger"] === true) {
+            $combatlogger = $this->getServer()->getPluginManager()->getPlugin("CombatLogger");
+            if(is_null($combatlogger)) {
+                $this->getLogger()->notice("Please download a valid version of CombatLogger");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$combatlogger = true;
+        }
     }
 
     /**
