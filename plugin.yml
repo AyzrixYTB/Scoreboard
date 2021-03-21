@@ -1,11 +1,13 @@
 name: Scoreboard
 main: Ayzrix\Scoreboard\Main
 api: 3.0.0
-version: 1.0.0
+version: 1.1.0
 softdepend:
   - PiggyFactions
   - FactionsPro
   - SimpleFaction
   - EconomyAPI
   - PurePerms
+  - SkyBlock
+  - SeeDevice
 author: Ayzrix

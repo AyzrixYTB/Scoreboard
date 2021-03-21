@@ -6,7 +6,6 @@
 
 | Name                  | Description                                           | Type      |
 |-----------------------|-------------------------------------------------------|-----------|
-| `Skyblock support`    | Add the Skyblock support.                             | support   |
 
 ## Additional plugins
 | Name          | Usage                                                         | Download                                                      |
@@ -16,6 +15,8 @@
 | SimpleFaction | {faction_name} {faction_rank} {faction_power} {faction_money} | [Download](https://github.com/AyzrixYTB/SimpleFaction)        |
 | EconomyAPI    | {money}                                                       | [Download](https://poggit.pmmp.io/p/EconomyAPI/)              |
 | PurePerms     | {rank} {prefix} {suffix}                                      | [Download](https://poggit.pmmp.io/p/PurePerms)                |
+| SkyBlock      | {island_blocks} {island_members} {island_rank} {island_size}  | [Download](https://github.com/andresbytes/SkyBlock)           |
+| SeeDevice     | {device}                                                      | [Download](https://github.com/Palente/SeeDevice)              |
 
 ## Config
 ```
@@ -43,10 +44,14 @@ options:
   EconomyAPI: false
   # {rank} {prefix} {suffix}
   PurePerms: false
+  # {island_blocks} {island_members} {island_rank} {island_size}
+  SkyBlock: false
+  # {device}
+  SeeDevice: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z}
 
-per_world: false;
+per_world: false
 title: "§6Scoreboard"
 lines:
     - "line1"
@@ -58,4 +63,5 @@ worlds:
     title: "§6Scoreboard"
     lines:
       - "line1"
-      - "line2"```
+      - "line2"
+```

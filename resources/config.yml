@@ -23,6 +23,10 @@ options:
   EconomyAPI: false
   # {rank} {prefix} {suffix}
   PurePerms: false
+  # {island_blocks} {island_members} {island_rank} {island_size}
+  SkyBlock: false
+  # {device}
+  SeeDevice: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z}
 

@@ -18,7 +18,9 @@ use Ayzrix\Scoreboard\Extensions\EconomyAPI;
 use Ayzrix\Scoreboard\Extensions\FactionsPro;
 use Ayzrix\Scoreboard\Extensions\PiggyFaction;
 use Ayzrix\Scoreboard\Extensions\PurePerms;
+use Ayzrix\Scoreboard\Extensions\SeeDevice;
 use Ayzrix\Scoreboard\Extensions\SimpleFaction;
+use Ayzrix\Scoreboard\Extensions\Skyblock;
 use Ayzrix\Scoreboard\Main;
 use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\event\entity\EntityLevelChangeEvent;
@@ -46,6 +48,8 @@ class PlayerListener implements Listener {
                 if (Main::$simplefaction === true) $line = str_replace(["{faction_name}", "{faction_rank}", "{faction_power}", "{faction_money}"], [SimpleFaction::getPlayerFaction($player), SimpleFaction::getPlayerRank($player), SimpleFaction::getFactionPower($player), SimpleFaction::getFactionMoney($player)], $line);
                 if (Main::$economyapi === true) $line = str_replace(["{money}"], [EconomyAPI::getMoney($player)], $line);
                 if (Main::$pureperms === true) $line = str_replace(["{rank}", "{prefix}", "{suffix}"], [PurePerms::getPlayerRank($player), PurePerms::getPlayerPrefix($player), PurePerms::getPlayerSuffix($player)], $line);
+                if (Main::$skyblock === true) $line = str_replace(["{island_blocks}", "{island_members}", "{island_rank}", "{island_size}"], [Skyblock::getIslandBlocks($player), Skyblock::getIslandMembers($player), Skyblock::getIslandRank($player), Skyblock::getIslandSize($player)], $line);
+                if (Main::$seedevice === true) $line = str_replace(["{device}"], [SeeDevice::getPlayerOs($player)], $line);
                 $scoreboard->setLine($i, $line);
                 $i++;
             }
@@ -62,6 +66,8 @@ class PlayerListener implements Listener {
                     if (Main::$simplefaction === true) $line = str_replace(["{faction_name}", "{faction_rank}", "{faction_power}", "{faction_money}"], [SimpleFaction::getPlayerFaction($player), SimpleFaction::getPlayerRank($player), SimpleFaction::getFactionPower($player), SimpleFaction::getFactionMoney($player)], $line);
                     if (Main::$economyapi === true) $line = str_replace(["{money}"], [EconomyAPI::getMoney($player)], $line);
                     if (Main::$pureperms === true) $line = str_replace(["{rank}", "{prefix}", "{suffix}"], [PurePerms::getPlayerRank($player), PurePerms::getPlayerPrefix($player), PurePerms::getPlayerSuffix($player)], $line);
+                    if (Main::$skyblock === true) $line = str_replace(["{island_blocks}", "{island_members}", "{island_rank}", "{island_size}"], [Skyblock::getIslandBlocks($player), Skyblock::getIslandMembers($player), Skyblock::getIslandRank($player), Skyblock::getIslandSize($player)], $line);
+                    if (Main::$seedevice === true) $line = str_replace(["{device}"], [SeeDevice::getPlayerOs($player)], $line);
                     $scoreboard->setLine($i, $line);
                     $i++;
                 }
@@ -86,6 +92,8 @@ class PlayerListener implements Listener {
                         if (Main::$simplefaction === true) $line = str_replace(["{faction_name}", "{faction_rank}", "{faction_power}", "{faction_money}"], [SimpleFaction::getPlayerFaction($player), SimpleFaction::getPlayerRank($player), SimpleFaction::getFactionPower($player), SimpleFaction::getFactionMoney($player)], $line);
                         if (Main::$economyapi === true) $line = str_replace(["{money}"], [EconomyAPI::getMoney($player)], $line);
                         if (Main::$pureperms === true) $line = str_replace(["{rank}", "{prefix}", "{suffix}"], [PurePerms::getPlayerRank($player), PurePerms::getPlayerPrefix($player), PurePerms::getPlayerSuffix($player)], $line);
+                        if (Main::$skyblock === true) $line = str_replace(["{island_blocks}", "{island_members}", "{island_rank}", "{island_size}"], [Skyblock::getIslandBlocks($player), Skyblock::getIslandMembers($player), Skyblock::getIslandRank($player), Skyblock::getIslandSize($player)], $line);
+                        if (Main::$seedevice === true) $line = str_replace(["{device}"], [SeeDevice::getPlayerOs($player)], $line);
                         $scoreboard->setLine($i, $line);
                         $i++;
                     }

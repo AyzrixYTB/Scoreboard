@@ -27,6 +27,8 @@ class Main extends PluginBase {
     public static $simplefaction = false;
     public static $economyapi = false;
     public static $pureperms = false;
+    public static $skyblock = false;
+    public static $seedevice = false;
 
     public function onEnable(){
         $this->saveDefaultConfig();
@@ -75,6 +77,24 @@ class Main extends PluginBase {
                 $this->getServer()->getPluginManager()->disablePlugin($this);
                 return;
             } else self::$pureperms = true;
+        }
+
+        if (Utils::getIntoConfig("options")["SkyBlock"] === true) {
+            $skyblock = $this->getServer()->getPluginManager()->getPlugin("SkyBlock");
+            if(is_null($skyblock)) {
+                $this->getLogger()->notice("Please download a valid version of SkyBlock");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$skyblock = true;
+        }
+
+        if (Utils::getIntoConfig("options")["SeeDevice"] === true) {
+            $seedevice = $this->getServer()->getPluginManager()->getPlugin("SeeDevice");
+            if(is_null($seedevice)) {
+                $this->getLogger()->notice("Please download a valid version of SeeDevice");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$seedevice = true;
         }
 
         $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
