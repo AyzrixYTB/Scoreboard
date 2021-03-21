@@ -31,7 +31,7 @@ class ScoreboardAPI {
     public $displayname = "";
 
     /**
-     * @var string
+     * @var string[]
      */
     public $datas = [];
 
