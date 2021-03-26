@@ -23,8 +23,8 @@ class SimpleFaction {
      * @return string
      */
     public static function getPlayerFaction(Player $player): string {
-        if (FactionsAPI::isInFaction($player)) {
-            return FactionsAPI::getFaction($player);
+        if (FactionsAPI::isInFaction($player->getName())) {
+            return FactionsAPI::getFaction($player->getName());
         } else return "...";
     }
 
@@ -33,7 +33,7 @@ class SimpleFaction {
      * @return string
      */
     public static function getPlayerRank(Player $player): string {
-        if (FactionsAPI::isInFaction($player)) {
+        if (FactionsAPI::isInFaction($player->getName())) {
             return FactionsAPI::getRank($player->getName());
         } else return "...";
     }
@@ -43,8 +43,8 @@ class SimpleFaction {
      * @return string|int
      */
     public static function getFactionPower(Player $player): string {
-        if (FactionsAPI::isInFaction($player)) {
-            return FactionsAPI::getPower(FactionsAPI::getFaction($player));
+        if (FactionsAPI::isInFaction($player->getName())) {
+            return FactionsAPI::getPower(FactionsAPI::getFaction($player->getName()));
         } else return "...";
     }
 
@@ -53,8 +53,8 @@ class SimpleFaction {
      * @return string|int
      */
     public static function getFactionMoney(Player $player) {
-        if (FactionsAPI::isInFaction($player)) {
-            return FactionsAPI::getMoney(FactionsAPI::getFaction($player));
+        if (FactionsAPI::isInFaction($player->getName())) {
+            return FactionsAPI::getMoney(FactionsAPI::getFaction($player->getName()));
         } else return "...";
     }
 }
