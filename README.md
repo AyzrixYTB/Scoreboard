@@ -16,13 +16,14 @@
 | SimpleFaction | `{faction_name}`, `{faction_rank}`, `{faction_power}`, `{faction_money}` | [Download](https://github.com/AyzrixYTB/SimpleFaction)                                                                        |
 | EconomyAPI    | `{money}`                                                       | [Download](https://poggit.pmmp.io/p/EconomyAPI/)                                                                              |
 | PurePerms     | `{rank}`, `{prefix}`, `{suffix}`                                      | [Download](https://poggit.pmmp.io/p/PurePerms)                                                                                |
-| SkyBlock      | `{island_blocks}`, `{island_members}`, `{island_rank}`, `{island_size}`  | [Download](https://github.com/andresbytes/SkyBlock)                                                                           |
+| SkyBlock      | `{island_blocks}`, `{island_members}`, `{island_rank}`, `{island_size}`  | [Download](https://poggit.pmmp.io/p/SkyBlock)                                                                           |
 | SeeDevice     | `{device}`                                                      | [Download](https://github.com/Palente/SeeDevice)                                                                              |
 | Bounty        | `{bounty}`                                                      | [Download](https://github.com/JaxkDev/Bounty)                                                                                 |
 | Prisons       | `{prisons_rank}`, `{prisons_prestige}`                             | [Download](https://github.com/TPEimperialPE/Prisons)                                                                          |
 | OnlineTime    | `{onlinetime_session}`, `{onlinetime_total}`                       | [Download](https://github.com/Zedstar16/OnlineTime)                                                                           |
 | CombatLogger  | `{combatlogger_time}`                                           | [Download](https://github.com/JackNoordhuis/PocketMine-Plugins/tree/fcefe035e86150ddce59d7fda6f1bcdbf594a6e7/CombatLogger)    |
-
+| FightLogger   | `{fightlogger_time}`                                           | [Download](https://poggit.pmmp.io/p/FightLogger)    |
+| MyPlot        | `{myplot_owner}`, `{myplot_id}`                                            | [Download](https://poggit.pmmp.io/p/MyPlot)    |
 ## Config
 ```
 #     _____                    _                         _

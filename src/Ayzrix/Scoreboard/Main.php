@@ -34,16 +34,19 @@ class Main extends PluginBase {
     public static $prison = false;
     public static $combatlogger = false;
     public static $onlinetime = false;
+    public static $fightlogger = false;
+    public static $myplot = false;
 
     public function onEnable(){
         $this->saveDefaultConfig();
         self::$instance = $this;
         $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
         $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), Utils::getIntoConfig("update_time"));
-        $this->checkDepencies();
+        $this->checkDependencies();
     }
 
-    private function checkDepencies(): void {
+    private function checkDependencies(): void {
+
         if (Utils::getIntoConfig("options")["PiggyFaction"] === true) {
             $piggyfaction = $this->getServer()->getPluginManager()->getPlugin("PiggyFactions");
             if(is_null($piggyfaction)) {
@@ -141,6 +144,24 @@ class Main extends PluginBase {
                 $this->getServer()->getPluginManager()->disablePlugin($this);
                 return;
             } else self::$combatlogger = true;
+        }
+
+        if (Utils::getIntoConfig("options")["FightLogger"] === true) {
+            $fightlogger = $this->getServer()->getPluginManager()->getPlugin("FightLogger");
+            if(is_null($fightlogger)) {
+                $this->getLogger()->notice("Please download a valid version of FightLogger");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$fightlogger = true;
+        }
+
+        if (Utils::getIntoConfig("options")["MyPlot"] === true) {
+            $myplot = $this->getServer()->getPluginManager()->getPlugin("MyPlot");
+            if(is_null($myplot)) {
+                $this->getLogger()->notice("Please download a valid version of MyPlot");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$myplot = true;
         }
     }
 
