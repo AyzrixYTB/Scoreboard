@@ -14,6 +14,7 @@
 namespace Ayzrix\Scoreboard\Utils;
 
 use Ayzrix\Scoreboard\Extensions\Bounty;
+use Ayzrix\Scoreboard\Extensions\CoinsSystem;
 use Ayzrix\Scoreboard\Extensions\CombatLogger;
 use Ayzrix\Scoreboard\Extensions\EconomyAPI;
 use Ayzrix\Scoreboard\Extensions\FactionsPro;
@@ -60,6 +61,7 @@ class Utils {
         if (Main::$combatlogger === true) $string = str_replace(["{combatlogger_time}"], [CombatLogger::getTaggedTime($player)], $string);
         if (Main::$fightlogger === true) $string = str_replace(["{fightlogger_time}"], [FightLogger::getTaggedTime($player)], $string);
         if (Main::$myplot === true) $string = str_replace(["{myplot_owner}", "{myplot_id}"], [MyPlot::getPlotOwner($player), MyPlot::getPlotID($player)], $string);
+        if (Main::$coinssystem === true) $string = str_replace(["{coins}"], [CoinsSystem::getPlayerCoins($player)], $string);
         return $string;
     }
 }

@@ -24,6 +24,7 @@
 | CombatLogger  | `{combatlogger_time}`                                           | [Download](https://github.com/JackNoordhuis/PocketMine-Plugins/tree/fcefe035e86150ddce59d7fda6f1bcdbf594a6e7/CombatLogger)    |
 | FightLogger   | `{fightlogger_time}`                                           | [Download](https://poggit.pmmp.io/p/FightLogger)    |
 | MyPlot        | `{myplot_owner}`, `{myplot_id}`                                            | [Download](https://poggit.pmmp.io/p/MyPlot)    |
+| CoinsSystem   | `{coins}`                                            | [Download](https://poggit.pmmp.io/p/CoinsSystem)    |
 ## Config
 ```
 #     _____                    _                         _

@@ -36,6 +36,7 @@ class Main extends PluginBase {
     public static $onlinetime = false;
     public static $fightlogger = false;
     public static $myplot = false;
+    public static $coinssystem = false;
 
     public function onEnable(){
         $this->saveDefaultConfig();
@@ -162,6 +163,15 @@ class Main extends PluginBase {
                 $this->getServer()->getPluginManager()->disablePlugin($this);
                 return;
             } else self::$myplot = true;
+        }
+
+        if (Utils::getIntoConfig("options")["CoinsSystem"] === true) {
+            $coinssystem = $this->getServer()->getPluginManager()->getPlugin("CoinsSystem");
+            if(is_null($coinssystem)) {
+                $this->getLogger()->notice("Please download a valid version of CoinsSystem");
+                $this->getServer()->getPluginManager()->disablePlugin($this);
+                return;
+            } else self::$coinssystem = true;
         }
     }
 

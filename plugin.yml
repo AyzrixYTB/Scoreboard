@@ -16,4 +16,5 @@ softdepend:
   - CombatLogger
   - FightLogger
   - MyPlot
+  - CoinsSystem
 author: Ayzrix
