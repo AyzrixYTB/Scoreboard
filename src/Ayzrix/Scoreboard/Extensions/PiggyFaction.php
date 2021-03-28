@@ -32,7 +32,7 @@ class PiggyFaction {
 
     /**
      * @param Player $player
-     * @return string|null
+     * @return string
      */
     public static function getPlayerRank(Player $player): string {
         $member = PlayerManager::getInstance()->getPlayer($player);

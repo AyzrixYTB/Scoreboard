@@ -43,6 +43,7 @@ class Utils {
     }
 
     /**
+     * @param Player $player
      * @param string $string
      * @return string
      */

@@ -42,7 +42,7 @@ class SimpleFaction {
      * @param Player $player
      * @return string|int
      */
-    public static function getFactionPower(Player $player): string {
+    public static function getFactionPower(Player $player) {
         if (FactionsAPI::isInFaction($player->getName())) {
             return FactionsAPI::getPower(FactionsAPI::getFaction($player->getName()));
         } else return "...";
