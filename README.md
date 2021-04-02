@@ -1,4 +1,4 @@
-[![Discord](https://img.shields.io/discord/800828802921529355.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/wuNvKw948n)
+[![Discord](https://img.shields.io/discord/800828802921529355.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/ruBKMD9a9J)
 # Scoreboard
 ###### A simple Pocketmine-MP plugin for creating optimized scoreboards.
 
