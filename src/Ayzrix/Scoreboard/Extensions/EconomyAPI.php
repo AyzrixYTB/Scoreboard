@@ -28,9 +28,9 @@ class EconomyAPI {
 
     /**
      * @param Player $player
-     * @return int
+     * @return int|string|bool
      */
-    public static function getMoney(Player $player): int {
+    public static function getMoney(Player $player) {
         return self::getPlugin()->myMoney($player);
     }
 }
