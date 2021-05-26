@@ -28,7 +28,7 @@ class Prisons {
 
     /**
      * @param Player $player
-     * @return int
+     * @return string
      */
     public static function getPlayerRank(Player $player): string {
         return self::getPlugin()->getRank($player->getName());
