@@ -25,6 +25,10 @@
 | FightLogger   | `{fightlogger_time}`                                           | [Download](https://poggit.pmmp.io/p/FightLogger)    |
 | MyPlot        | `{myplot_owner}`, `{myplot_id}`                                            | [Download](https://poggit.pmmp.io/p/MyPlot)    |
 | CoinsSystem   | `{coins}`                                            | [Download](https://poggit.pmmp.io/p/CoinsSystem)    |
+| KDR           | `{kills}` `{deaths}` `{kdr}`        | [Download](https://poggit.pmmp.io/p/KDR) |
+| Voteparty     | `{votes}` `{maxvotes}`              | [Download](https://poggit.pmmp.io/p/VoteParty) |
+
+
 ## Config
 ```
 #     _____                    _                         _
@@ -42,7 +46,7 @@ update_time: 40 # TICKS 20 = 1 second
 
 options:
   # {faction_name} {faction_rank} {faction_power}
-  PiggyFaction: false
+  PiggyFactions: false
   # {faction_name} {faction_power}
   FactionsPro: false
   # {faction_name} {faction_rank} {faction_power} {faction_money}
@@ -69,6 +73,10 @@ options:
   MyPlot: false
   # {coins}
   CoinsSystem: false
+  # {kills} {deaths} {kdr}
+  KDR: false
+  # {votes} {maxvotes}
+  VoteParty: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 
