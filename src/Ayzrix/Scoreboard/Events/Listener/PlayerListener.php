@@ -60,6 +60,7 @@ class PlayerListener implements Listener {
             if (Utils::getIntoConfig("per_world") === true) {
                 if (isset(Utils::getIntoConfig("worlds")[$levelName])) {
                     $scoreboard = self::$scoreboards[$player->getName()] = new ScoreboardAPI($player);
+                    $scoreboard->sendRemoveObjectivePacket();
                     $scoreboard->setDisplayName(Utils::getIntoConfig("worlds")[$levelName]["title"]);
                     $i = 0;
                     foreach (Utils::getIntoConfig("worlds")[$levelName]["lines"] as $line) {
