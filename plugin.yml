@@ -19,4 +19,5 @@ softdepend:
   - CoinsSystem
   - KDR
   - VoteParty
+  - BankUI
 author: Ayzrix
