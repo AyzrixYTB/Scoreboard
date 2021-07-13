@@ -13,6 +13,7 @@
 
 namespace Ayzrix\Scoreboard\Utils;
 
+use Ayzrix\Scoreboard\Extensions\BankUI;
 use Ayzrix\Scoreboard\Extensions\Bounty;
 use Ayzrix\Scoreboard\Extensions\CoinsSystem;
 use Ayzrix\Scoreboard\Extensions\CombatLogger;
@@ -67,6 +68,7 @@ class Utils {
         if (Main::$options["CoinsSystem"] === true) $string = str_replace(["{coins}"], [CoinsSystem::getPlayerCoins($player)], $string);
         if (Main::$options["KDR"] === true) $string = str_replace(["{kills}", "{deaths}", "{kdr}"], [KDR::getPlayerKills($player), KDR::getPlayerDeaths($player), KDR::getPlayerKDR($player)], $string);
         if (Main::$options["VoteParty"] === true) $string = str_replace(["{votes}", "{maxvotes}"], [VoteParty::getVotes(), VoteParty::getMaxVotes()], $string);
+        if (Main::$options["BankUI"] === true) $string = str_replace(["{balance}"], [BankUI::getPlayerBalance($player)], $string);
         return $string;
     }
 }

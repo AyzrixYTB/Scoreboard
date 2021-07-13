@@ -45,6 +45,8 @@ options:
   KDR: false
   # {votes} {maxvotes}
   VoteParty: false
+  # {balance}
+  BankUI: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 

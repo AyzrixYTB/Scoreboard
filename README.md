@@ -27,6 +27,7 @@
 | CoinsSystem   | `{coins}`                                            | [Download](https://poggit.pmmp.io/p/CoinsSystem)    |
 | KDR           | `{kills}` `{deaths}` `{kdr}`        | [Download](https://poggit.pmmp.io/p/KDR) |
 | Voteparty     | `{votes}` `{maxvotes}`              | [Download](https://poggit.pmmp.io/p/VoteParty) |
+| BankUI        | `{balance}` | [Download](https://poggit.pmmp.io/p/BankUI) |
 
 
 ## Config
@@ -77,6 +78,8 @@ options:
   KDR: false
   # {votes} {maxvotes}
   VoteParty: false
+  # {balance}
+  BankUI: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 
