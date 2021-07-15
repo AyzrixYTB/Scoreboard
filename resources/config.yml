@@ -47,6 +47,10 @@ options:
   VoteParty: false
   # {balance}
   BankUI: false
+  # {island_members} {island_rank} {island_size} {island_value} {island_locked_status}
+  RedSkyBlock: false
+  # {vanish_fake_count}
+  VanishV2: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 

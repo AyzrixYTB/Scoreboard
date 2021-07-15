@@ -26,9 +26,11 @@ use Ayzrix\Scoreboard\Extensions\OnlineTime;
 use Ayzrix\Scoreboard\Extensions\PiggyFaction;
 use Ayzrix\Scoreboard\Extensions\Prisons;
 use Ayzrix\Scoreboard\Extensions\PurePerms;
+use Ayzrix\Scoreboard\Extensions\RedSkyBlock;
 use Ayzrix\Scoreboard\Extensions\SeeDevice;
 use Ayzrix\Scoreboard\Extensions\SimpleFaction;
 use Ayzrix\Scoreboard\Extensions\Skyblock;
+use Ayzrix\Scoreboard\Extensions\VanishV2;
 use Ayzrix\Scoreboard\Extensions\VoteParty;
 use Ayzrix\Scoreboard\Main;
 use pocketmine\Player;
@@ -69,6 +71,8 @@ class Utils {
         if (Main::$options["KDR"] === true) $string = str_replace(["{kills}", "{deaths}", "{kdr}"], [KDR::getPlayerKills($player), KDR::getPlayerDeaths($player), KDR::getPlayerKDR($player)], $string);
         if (Main::$options["VoteParty"] === true) $string = str_replace(["{votes}", "{maxvotes}"], [VoteParty::getVotes(), VoteParty::getMaxVotes()], $string);
         if (Main::$options["BankUI"] === true) $string = str_replace(["{balance}"], [BankUI::getPlayerBalance($player)], $string);
+        if (Main::$options["RedSkyBlock"] === true) $string = str_replace(["{island_members}", "{island_rank}", "{island_size}", "{island_value}", "{island_locked_status}"], [RedSkyBlock::getIslandMembers($player), RedSkyBlock::getIslandRank($player), RedSkyBlock::getIslandSize($player), RedSkyBlock::getIslandValue($player), RedSkyBlock::getIslandLocked($player)], $string);
+        if (Main::$options["VanishV2"] === true) $string = str_replace(["{vanish_fake_count}"], [VanishV2::getFakeCount()], $string);
         return $string;
     }
 }

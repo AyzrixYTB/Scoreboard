@@ -8,26 +8,28 @@
 |-----------------------|-------------------------------------------------------|-----------|
 
 ## Supported Tags
-| Name          | Tags                                                         | Download                                                                                                                      |
-|---------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------    | 
-| Base | `{ping}`, `{tps}`, `{name}`, `{online}`, `{max_online}`, `{level}`, `{x}`, `{y}`, `{z}`, `{ip}`, `{port}`, `{uid}`, `{xuid}`, `{health}`, `{max_health}`, `{food}`, `{max_food}`, `{gamemode}`, `{scale}`                  |                                                                           | |
-| PiggyFactions | `{faction_name}`, `{faction_rank}`, `{faction_power}`                 | [Download](https://poggit.pmmp.io/p/PiggyFactions)                                                                            |
-| FactionsPro   | `{faction_name}`, `{faction_power}`                                | [Download](https://poggit.pmmp.io/p/FactionsPro)                                                                              |
-| SimpleFaction | `{faction_name}`, `{faction_rank}`, `{faction_power}`, `{faction_money}` | [Download](https://github.com/AyzrixYTB/SimpleFaction)                                                                        |
-| EconomyAPI    | `{money}`                                                       | [Download](https://poggit.pmmp.io/p/EconomyAPI/)                                                                              |
-| PurePerms     | `{rank}`, `{prefix}`, `{suffix}`                                      | [Download](https://poggit.pmmp.io/p/PurePerms)                                                                                |
-| SkyBlock      | `{island_blocks}`, `{island_members}`, `{island_rank}`, `{island_size}`  | [Download](https://poggit.pmmp.io/p/SkyBlock)                                                                           |
-| SeeDevice     | `{device}`                                                      | [Download](https://github.com/Palente/SeeDevice)                                                                              |
-| Bounty        | `{bounty}`                                                      | [Download](https://github.com/JaxkDev/Bounty)                                                                                 |
-| Prisons       | `{prisons_rank}`, `{prisons_prestige}`                             | [Download](https://github.com/TPEimperialPE/Prisons)                                                                          |
-| OnlineTime    | `{onlinetime_session}`, `{onlinetime_total}`                       | [Download](https://github.com/Zedstar16/OnlineTime)                                                                           |
-| CombatLogger  | `{combatlogger_time}`                                           | [Download](https://github.com/JackNoordhuis/PocketMine-Plugins/tree/fcefe035e86150ddce59d7fda6f1bcdbf594a6e7/CombatLogger)    |
-| FightLogger   | `{fightlogger_time}`                                           | [Download](https://poggit.pmmp.io/p/FightLogger)    |
-| MyPlot        | `{myplot_owner}`, `{myplot_id}`                                            | [Download](https://poggit.pmmp.io/p/MyPlot)    |
-| CoinsSystem   | `{coins}`                                            | [Download](https://poggit.pmmp.io/p/CoinsSystem)    |
-| KDR           | `{kills}` `{deaths}` `{kdr}`        | [Download](https://poggit.pmmp.io/p/KDR) |
-| Voteparty     | `{votes}` `{maxvotes}`              | [Download](https://poggit.pmmp.io/p/VoteParty) |
-| BankUI        | `{balance}` | [Download](https://poggit.pmmp.io/p/BankUI) |
+| Name          | Tags                                                         | Download                                                                                                                                                               |
+|---------------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Base          | `{ping}`, `{tps}`, `{name}`, `{online}`, `{max_online}`, `{level}`, `{x}`, `{y}`, `{z}`, `{ip}`, `{port}`, `{uid}`, `{xuid}`, `{health}`, `{max_health}`, `{food}`, `{max_food}`, `{gamemode}`, `{scale}`                             |                                                                           | |
+| PiggyFactions | `{faction_name}`, `{faction_rank}`, `{faction_power}`                                                 | [Download](https://poggit.pmmp.io/p/PiggyFactions)                                                                            |
+| FactionsPro   | `{faction_name}`, `{faction_power}`                                                                   | [Download](https://poggit.pmmp.io/p/FactionsPro)                                                                              |
+| SimpleFaction | `{faction_name}`, `{faction_rank}`, `{faction_power}`, `{faction_money}`                              | [Download](https://github.com/AyzrixYTB/SimpleFaction)                                                                        |
+| EconomyAPI    | `{money}`                                                                                             | [Download](https://poggit.pmmp.io/p/EconomyAPI/)                                                                              |
+| PurePerms     | `{rank}`, `{prefix}`, `{suffix}`                                                                      | [Download](https://poggit.pmmp.io/p/PurePerms)                                                                                |
+| SkyBlock      | `{island_blocks}`, `{island_members}`, `{island_rank}`, `{island_size}`                               | [Download](https://poggit.pmmp.io/p/SkyBlock)                                                                                 |
+| SeeDevice     | `{device}`                                                                                            | [Download](https://github.com/Palente/SeeDevice)                                                                              |
+| Bounty        | `{bounty}`                                                                                            | [Download](https://github.com/JaxkDev/Bounty)                                                                                 |
+| Prisons       | `{prisons_rank}`, `{prisons_prestige}`                                                                | [Download](https://github.com/TPEimperialPE/Prisons)                                                                          |
+| OnlineTime    | `{onlinetime_session}`, `{onlinetime_total}`                                                          | [Download](https://github.com/Zedstar16/OnlineTime)                                                                           |
+| CombatLogger  | `{combatlogger_time}`                                                                                 | [Download](https://github.com/JackNoordhuis/PocketMine-Plugins/tree/fcefe035e86150ddce59d7fda6f1bcdbf594a6e7/CombatLogger)    |
+| FightLogger   | `{fightlogger_time}`                                                                                  | [Download](https://poggit.pmmp.io/p/FightLogger)                                                                              |
+| MyPlot        | `{myplot_owner}`, `{myplot_id}`                                                                       | [Download](https://poggit.pmmp.io/p/MyPlot)                                                                                   |
+| CoinsSystem   | `{coins}`                                                                                             | [Download](https://poggit.pmmp.io/p/CoinsSystem)                                                                              |
+| KDR           | `{kills}` `{deaths}` `{kdr}`                                                                          | [Download](https://poggit.pmmp.io/p/KDR)                                                                                      |
+| Voteparty     | `{votes}` `{maxvotes}`                                                                                | [Download](https://poggit.pmmp.io/p/VoteParty)                                                                                |
+| BankUI        | `{balance}`                                                                                           | [Download](https://poggit.pmmp.io/p/BankUI)                                                                                   |
+| RedSkyBlock   | `{island_members}` `{island_rank}` `{island_size}` `{island_value}` `{island_locked_status}`          | [Download](https://poggit.pmmp.io/p/RedSkyBlock)                                                                              |
+| VanishV2      | `{vanish_fake_count}`                                                                                 | [Download](https://poggit.pmmp.io/p/VanishV2)                                                                                 |
 
 
 ## Config
@@ -80,6 +82,10 @@ options:
   VoteParty: false
   # {balance}
   BankUI: false
+  # {island_members} {island_rank} {island_size} {island_value} {island_locked_status}
+  RedSkyBlock: false
+  # {vanish_fake_count}
+  VanishV2: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 
