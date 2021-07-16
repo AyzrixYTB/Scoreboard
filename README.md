@@ -30,7 +30,7 @@
 | BankUI        | `{balance}`                                                                                           | [Download](https://poggit.pmmp.io/p/BankUI)                                                                                   |
 | RedSkyBlock   | `{island_members}` `{island_rank}` `{island_size}` `{island_value}` `{island_locked_status}`          | [Download](https://poggit.pmmp.io/p/RedSkyBlock)                                                                              |
 | VanishV2      | `{vanish_fake_count}`                                                                                 | [Download](https://poggit.pmmp.io/p/VanishV2)                                                                                 |
-
+| MultiEconomy  | `{balance.currencyName}`                                                                              | [Download](https://poggit.pmmp.io/p/MultiEconomy)                                                                             |
 
 ## Config
 ```
@@ -86,6 +86,8 @@ options:
   RedSkyBlock: false
   # {vanish_fake_count}
   VanishV2: false
+  # {balance.currencyName} -> Replace "currencyName" by the currency name
+  MultiEconomy: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 

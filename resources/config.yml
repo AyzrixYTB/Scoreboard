@@ -51,6 +51,8 @@ options:
   RedSkyBlock: false
   # {vanish_fake_count}
   VanishV2: false
+  # {balance.currencyName} -> Replace "currencyName" by the currency name
+  MultiEconomy: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 
