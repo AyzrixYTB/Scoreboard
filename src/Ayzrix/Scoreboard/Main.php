@@ -13,6 +13,7 @@
 
 namespace Ayzrix\Scoreboard;
 
+use Ayzrix\Scoreboard\Commands\Scoreboard;
 use Ayzrix\Scoreboard\Events\Listener\PlayerListener;
 use Ayzrix\Scoreboard\Tasks\ScoreboardTask;
 use Ayzrix\Scoreboard\Utils\Utils;
@@ -32,6 +33,9 @@ class Main extends PluginBase {
         $this->getServer()->getPluginManager()->registerEvents(new PlayerListener(), $this);
         $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), Utils::getIntoConfig("update_time"));
         $this->checkDependencies();
+        if (Utils::getIntoConfig("command") === true) {
+            $this->getServer()->getCommandMap()->register("ayzrix", new Scoreboard($this));
+        }
     }
 
     private function checkDependencies(): void {

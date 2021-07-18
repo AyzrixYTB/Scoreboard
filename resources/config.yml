@@ -69,4 +69,10 @@ worlds:
     lines:
       - "line1"
       - "line2"
+
+# true or false if you want the command for disable the scoreboard
+command: false
+command_description: "Hide or show the scoreboard"
+command_success_hide: "§aYou have successfully hidden the scoreboard"
+command_success_show: "§aYou have successfully displayed the scoreboard"
 ...

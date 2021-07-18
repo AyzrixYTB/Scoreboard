@@ -22,7 +22,7 @@ use pocketmine\Player;
 
 class PlayerListener implements Listener {
 
-    /** @var array $scoreboards */
+    /** @var ScoreboardAPI[] $scoreboards */
     public static $scoreboards = [];
 
     public function PlayerJoin (PlayerJoinEvent $event) {
@@ -59,16 +59,18 @@ class PlayerListener implements Listener {
         if ($player instanceof Player) {
             if (Utils::getIntoConfig("per_world") === true) {
                 if (isset(Utils::getIntoConfig("worlds")[$levelName])) {
-                    $scoreboard = self::$scoreboards[$player->getName()] = new ScoreboardAPI($player);
-                    $scoreboard->sendRemoveObjectivePacket();
-                    $scoreboard->setDisplayName(Utils::getIntoConfig("worlds")[$levelName]["title"]);
-                    $i = 0;
-                    foreach (Utils::getIntoConfig("worlds")[$levelName]["lines"] as $line) {
-                        $line = Utils::formateString($player, $line);
-                        $scoreboard->setLine($i, $line);
-                        $i++;
+                    if (isset(self::$scoreboards[$player->getName()])) {
+                        $scoreboard = self::$scoreboards[$player->getName()] = new ScoreboardAPI($player);
+                        $scoreboard->sendRemoveObjectivePacket();
+                        $scoreboard->setDisplayName(Utils::getIntoConfig("worlds")[$levelName]["title"]);
+                        $i = 0;
+                        foreach (Utils::getIntoConfig("worlds")[$levelName]["lines"] as $line) {
+                            $line = Utils::formateString($player, $line);
+                            $scoreboard->setLine($i, $line);
+                            $i++;
+                        }
+                        $scoreboard->set();
                     }
-                    $scoreboard->set();
                 } else {
                     if (isset(self::$scoreboards[$player->getName()])) {
                         self::$scoreboards[$player->getName()]->sendRemoveObjectivePacket();

@@ -2,10 +2,10 @@
 # Scoreboard
 ###### A simple Pocketmine-MP plugin for creating optimized scoreboards.
 
-## Future additions
-
-| Name                  | Description                                           | Type      |
-|-----------------------|-------------------------------------------------------|-----------|
+## Command
+| Name              | Usage             | Description                   | Enable                                    |
+|-------------------|-------------------|-------------------------------|-------------------------------------------|
+| Scoreboard        | /scoreboard       | Hide or show the scoreboard   | Put ``command`` on ``true`` in the [config](https://github.com/AyzrixYTB/Scoreboard/blob/main/resources/config.yml#L74) |
 
 ## Supported Tags
 | Name          | Tags                                                         | Download                                                                                                                                                               |
@@ -104,4 +104,10 @@ worlds:
     lines:
       - "line1"
       - "line2"
+
+# true or false if you want the command for disable the scoreboard
+command: false
+command_description: "Hide or show the scoreboard"
+command_success_hide: "§aYou have successfully hidden the scoreboard"
+command_success_show: "§aYou have successfully displayed the scoreboard"
 ```
