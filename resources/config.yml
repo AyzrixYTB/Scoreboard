@@ -53,6 +53,8 @@ options:
   VanishV2: false
   # {balance.currencyName} -> Replace "currencyName" by the currency name
   MultiEconomy: false
+  # {rank} {prefix}
+  RankSystem: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 

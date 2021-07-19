@@ -27,6 +27,7 @@ use Ayzrix\Scoreboard\Extensions\OnlineTime;
 use Ayzrix\Scoreboard\Extensions\PiggyFaction;
 use Ayzrix\Scoreboard\Extensions\Prisons;
 use Ayzrix\Scoreboard\Extensions\PurePerms;
+use Ayzrix\Scoreboard\Extensions\RankSystem;
 use Ayzrix\Scoreboard\Extensions\RedSkyBlock;
 use Ayzrix\Scoreboard\Extensions\SeeDevice;
 use Ayzrix\Scoreboard\Extensions\SimpleFaction;
@@ -75,6 +76,7 @@ class Utils {
         if (Main::$options["RedSkyBlock"] === true) $string = str_replace(["{island_members}", "{island_rank}", "{island_size}", "{island_value}", "{island_locked_status}"], [RedSkyBlock::getIslandMembers($player), RedSkyBlock::getIslandRank($player), RedSkyBlock::getIslandSize($player), RedSkyBlock::getIslandValue($player), RedSkyBlock::getIslandLocked($player)], $string);
         if (Main::$options["VanishV2"] === true) $string = str_replace(["{vanish_fake_count}"], [VanishV2::getFakeCount()], $string);
         if (Main::$options["MultiEconomy"] === true) $string = str_replace(MultiEconomy::getAllTags($player)[0], MultiEconomy::getAllTags($player)[1], $string);
+        if (Main::$options["RankSystem"] === true) $string = str_replace(["{rank}", "{prefix}"], [RankSystem::getPlayerRank($player), RankSystem::getPlayerPrefix($player)], $string);
         return $string;
     }
 }

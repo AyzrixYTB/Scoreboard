@@ -1,7 +1,7 @@
 name: Scoreboard
 main: Ayzrix\Scoreboard\Main
 api: 3.0.0
-version: 1.4.0
+version: 1.5.0
 softdepend:
   - PiggyFactions
   - FactionsPro
@@ -23,4 +23,5 @@ softdepend:
   - RedSkyBlock
   - VanishV2
   - MultiEconomy
+  - RankSystem
 author: Ayzrix
