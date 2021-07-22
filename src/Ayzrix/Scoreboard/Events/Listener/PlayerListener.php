@@ -19,6 +19,7 @@ use pocketmine\event\entity\EntityLevelChangeEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\Player;
+use pocketmine\Server;
 
 class PlayerListener implements Listener {
 
@@ -49,6 +50,8 @@ class PlayerListener implements Listener {
                     $i++;
                 }
                 $scoreboard->set();
+            } else {
+                self::$scoreboards[$player->getName()] = new ScoreboardAPI($player);
             }
         }
     }
@@ -74,7 +77,6 @@ class PlayerListener implements Listener {
                 } else {
                     if (isset(self::$scoreboards[$player->getName()])) {
                         self::$scoreboards[$player->getName()]->sendRemoveObjectivePacket();
-                        unset(self::$scoreboards[$player->getName()]);
                     }
                 }
             }
