@@ -22,6 +22,7 @@ use Ayzrix\Scoreboard\Extensions\FactionsPro;
 use Ayzrix\Scoreboard\Extensions\FightLogger;
 use Ayzrix\Scoreboard\Extensions\KDR;
 use Ayzrix\Scoreboard\Extensions\MultiEconomy;
+use Ayzrix\Scoreboard\Extensions\MultiServerCounter;
 use Ayzrix\Scoreboard\Extensions\MyPlot;
 use Ayzrix\Scoreboard\Extensions\OnlineTime;
 use Ayzrix\Scoreboard\Extensions\PiggyFaction;
@@ -77,6 +78,7 @@ class Utils {
         if (Main::$options["VanishV2"] === true) $string = str_replace(["{vanish_fake_count}"], [VanishV2::getFakeCount()], $string);
         if (Main::$options["MultiEconomy"] === true) $string = str_replace(MultiEconomy::getAllTags($player)[0], MultiEconomy::getAllTags($player)[1], $string);
         if (Main::$options["RankSystem"] === true) $string = str_replace(["{rank}", "{prefix}"], [RankSystem::getPlayerRank($player), RankSystem::getPlayerPrefix($player)], $string);
+        if (Main::$options["MultiServerCounter"] === true) $string = str_replace(["{MultiServer.online}", "{MultiServer.Maxonline}"], [MultiServerCounter::getPlayerCount(), MultiServerCounter::getMaxPlayerCount()], $string);
         return $string;
     }
 }
