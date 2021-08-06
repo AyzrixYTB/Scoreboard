@@ -34,7 +34,7 @@ class Main extends PluginBase {
         $this->getScheduler()->scheduleRepeatingTask(new ScoreboardTask(), Utils::getIntoConfig("update_time"));
         $this->checkDependencies();
         if (Utils::getIntoConfig("command") === true) {
-            $this->getServer()->getCommandMap()->register("ayzrix", new Scoreboard($this));
+            $this->getServer()->getCommandMap()->register("scoreboard", new Scoreboard($this));
         }
     }
 

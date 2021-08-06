@@ -27,3 +27,4 @@ softdepend:
   - MultiServerCounter
   - Godmode
 author: Ayzrix
+mcpe-protocol: [407, 408, 419, 422, 428, 431, 440, 441, 448]
