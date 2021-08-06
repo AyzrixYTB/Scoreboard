@@ -20,6 +20,7 @@ use Ayzrix\Scoreboard\Extensions\CombatLogger;
 use Ayzrix\Scoreboard\Extensions\EconomyAPI;
 use Ayzrix\Scoreboard\Extensions\FactionsPro;
 use Ayzrix\Scoreboard\Extensions\FightLogger;
+use Ayzrix\Scoreboard\Extensions\Godmode;
 use Ayzrix\Scoreboard\Extensions\KDR;
 use Ayzrix\Scoreboard\Extensions\MultiEconomy;
 use Ayzrix\Scoreboard\Extensions\MultiServerCounter;
@@ -79,6 +80,7 @@ class Utils {
         if (Main::$options["MultiEconomy"] === true) $string = str_replace(MultiEconomy::getAllTags($player)[0], MultiEconomy::getAllTags($player)[1], $string);
         if (Main::$options["RankSystem"] === true) $string = str_replace(["{rank}", "{prefix}"], [RankSystem::getPlayerRank($player), RankSystem::getPlayerPrefix($player)], $string);
         if (Main::$options["MultiServerCounter"] === true) $string = str_replace(["{MultiServer.online}", "{MultiServer.Maxonline}"], [MultiServerCounter::getPlayerCount(), MultiServerCounter::getMaxPlayerCount()], $string);
+        if (Main::$options["Godmode"] === true) $string = str_replace(["{god}"], [Godmode::isPlayerGod($player)], $string);
         return $string;
     }
 }

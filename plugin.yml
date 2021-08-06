@@ -1,7 +1,7 @@
 name: Scoreboard
 main: Ayzrix\Scoreboard\Main
 api: 3.0.0
-version: 1.5.1
+version: 1.5.2
 softdepend:
   - PiggyFactions
   - FactionsPro
@@ -25,4 +25,5 @@ softdepend:
   - MultiEconomy
   - RankSystem
   - MultiServerCounter
+  - Godmode
 author: Ayzrix

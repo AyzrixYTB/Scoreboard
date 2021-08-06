@@ -33,6 +33,7 @@
 | MultiEconomy          | `{balance.currencyName}`                                                                              | [Download](https://poggit.pmmp.io/p/MultiEconomy)                                                                                             |
 | RankSystem            | `{rank}` `{prefix}`                                                                                   | [Download](https://poggit.pmmp.io/p/RankSystem)                                                                                               |
 | MultiServerCounter    | `{MultiServer.online}` `{MultiServer.Maxonline}`                                                      | [Download](https://poggit.pmmp.io/p/MultiServerCounter)                                                                                       |
+| Godmode               | `{god}`                                                                                               | [Download](https://poggit.pmmp.io/p/Godmode)                                                                                                  |
 
 ## Config
 ```
@@ -94,6 +95,8 @@ options:
   RankSystem: false
   # {MultiServer.online} {MultiServer.Maxonline}
   MultiServerCounter: false
+  # {god}
+  Godmode: false
 
 # BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
 
@@ -116,4 +119,8 @@ command: false
 command_description: "Hide or show the scoreboard"
 command_success_hide: "§aYou have successfully hidden the scoreboard"
 command_success_show: "§aYou have successfully displayed the scoreboard"
+
+# Text for all the plugins using enable/disable functions (GodMode, Fly, and more)
+enable: "§aEnable"
+disable: "§cDisable"
 ```
