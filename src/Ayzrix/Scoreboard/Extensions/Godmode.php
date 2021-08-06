@@ -17,13 +17,14 @@ use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
+use Vazzi\Godmode\Main as GodMain;
 
 class Godmode {
 
     /**
      * @return Plugin
      */
-    public static function getPlugin(): Plugin {
+    public static function getPlugin(): GodMain {
         return Server::getInstance()->getPluginManager()->getPlugin("Godmode");
     }
 
