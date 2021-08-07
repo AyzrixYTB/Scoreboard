@@ -83,4 +83,18 @@ class Utils {
         if (Main::$options["Godmode"] === true) $string = str_replace(["{god}"], [Godmode::isPlayerGod($player)], $string);
         return $string;
     }
+
+    /**
+     * @param float $money
+     * @return string
+     */
+    public static function convertMoney(float $money): string {
+        $suffixes = array('', 'k', 'M', 'B', 'T', 'q', 'Q', 's', 'S');
+        $suffixIndex = 0;
+        while(abs($money) >= 1000 && $suffixIndex < 8) {
+            $suffixIndex++;
+            $money /= 1000;
+        }
+        return ($money > 0 ? floor($money * 1000) / 1000 : ceil($money * 1000) / 1000) . $suffixes[$suffixIndex];
+    }
 }

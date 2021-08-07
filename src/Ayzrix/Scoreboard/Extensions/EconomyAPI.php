@@ -13,6 +13,7 @@
 
 namespace Ayzrix\Scoreboard\Extensions;
 
+use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
@@ -28,9 +29,11 @@ class EconomyAPI {
 
     /**
      * @param Player $player
-     * @return int|string|bool
+     * @return string
      */
-    public static function getMoney(Player $player) {
-        return self::getPlugin()->myMoney($player);
+    public static function getMoney(Player $player): string {
+        if (Utils::getIntoConfig("convert_money") === true) {
+            return Utils::convertMoney(self::getPlugin()->myMoney($player));
+        } else return self::getPlugin()->myMoney($player);
     }
 }

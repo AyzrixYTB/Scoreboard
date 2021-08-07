@@ -5,7 +5,7 @@
 ## Command
 | Name              | Usage             | Description                   | Enable                                    |
 |-------------------|-------------------|-------------------------------|-------------------------------------------|
-| Scoreboard        | /scoreboard       | Hide or show the scoreboard   | Put ``command`` on ``true`` in the [config](https://github.com/AyzrixYTB/Scoreboard/blob/main/resources/config.yml#L74) |
+| Scoreboard        | /scoreboard       | Hide or show the scoreboard   | Put ``command`` on ``true`` in the [config](https://github.com/AyzrixYTB/Scoreboard/blob/main/resources/config.yml#L80) |
 
 ## Supported Tags
 | Name                  | Tags                                                         | Download                                                                                                                                                                               |
@@ -123,4 +123,8 @@ command_success_show: "§aYou have successfully displayed the scoreboard"
 # Text for all the plugins using enable/disable functions (GodMode, Fly, and more)
 enable: "§aEnable"
 disable: "§cDisable"
+
+# Put on true only if you have activated an Economy Support and if you want to convert the money text (Ex: 100000 = 100K 1000000 = 1M 1000000000 = 1B)
+# Support : EconomyAPI, MultiEconomy, BankUI, CoinsSystem
+convert_money: false
 ```

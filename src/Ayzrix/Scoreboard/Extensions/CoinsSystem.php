@@ -13,6 +13,7 @@
 
 namespace Ayzrix\Scoreboard\Extensions;
 
+use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
@@ -28,9 +29,11 @@ class CoinsSystem {
 
     /**
      * @param Player $player
-     * @return int
+     * @return string
      */
-    public static function getPlayerCoins(Player $player): int {
-        return self::getPlugin()->getCoins($player->getName());
+    public static function getPlayerCoins(Player $player): string {
+        if (Utils::getIntoConfig("convert_money") === true) {
+            return Utils::convertMoney(self::getPlugin()->getCoins($player->getName()));
+        } else return self::getPlugin()->getCoins($player->getName());
     }
 }

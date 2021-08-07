@@ -14,6 +14,7 @@
 namespace Ayzrix\Scoreboard\Extensions;
 
 use Ayzrix\Scoreboard\Main;
+use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
@@ -32,7 +33,9 @@ class MultiEconomy {
         $return = [];
         foreach ($currencies as $currency) {
             $return[0][] = "{balance." . $currency->getName() . "}";
-            $return[1][] = $currency->getBalance($player->getName());
+            if (Utils::getIntoConfig("convert_money") === true) {
+                $return[1][] = Utils::convertMoney($currency->getBalance($player->getName()));
+            } else $return[1][] = $currency->getBalance($player->getName());
         }
         return $return;
     }

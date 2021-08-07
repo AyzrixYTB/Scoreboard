@@ -13,6 +13,7 @@
 
 namespace Ayzrix\Scoreboard\Extensions;
 
+use Ayzrix\Scoreboard\Utils\Utils;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\Server;
@@ -29,10 +30,12 @@ class BankUI {
 
     /**
      * @param Player $player
-     * @return int
+     * @return string
      */
-    public static function getPlayerBalance(Player $player): int {
+    public static function getPlayerBalance(Player $player): string {
         $config = new Config(self::getPlugin()->getDataFolder() . "Players/" . $player->getName() . ".yml", Config::YAML);
-        return (int)$config->get("Money") ?? 0;
+        if (Utils::getIntoConfig("convert_money") === true) {
+            return Utils::convertMoney($config->get("Money") ?? 0);
+        } else return $config->get("Money") ?? 0;
     }
 }
