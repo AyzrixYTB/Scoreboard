@@ -31,7 +31,7 @@ class Prisons {
      * @return string
      */
     public static function getPlayerRank(Player $player): string {
-        return self::getPlugin()->getRank($player->getName());
+        return self::getPlugin()->getPlayerManager()->getPlayer($player)->getPrisonRank();
     }
 
     /**
@@ -39,6 +39,6 @@ class Prisons {
      * @return int
      */
     public static function getPlayerPrestige(Player $player): int {
-        return self::getPlugin()->getPrestige($player->getName());
+        return self::getPlugin()->getPlayerManager()->getPlayer($player)->getPrestige();
     }
 }
