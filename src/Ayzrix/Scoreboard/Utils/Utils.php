@@ -18,6 +18,7 @@ use Ayzrix\Scoreboard\Extensions\Bounty;
 use Ayzrix\Scoreboard\Extensions\CoinsSystem;
 use Ayzrix\Scoreboard\Extensions\CombatLogger;
 use Ayzrix\Scoreboard\Extensions\EconomyAPI;
+use Ayzrix\Scoreboard\Extensions\FactionMaster;
 use Ayzrix\Scoreboard\Extensions\FactionsPro;
 use Ayzrix\Scoreboard\Extensions\FightLogger;
 use Ayzrix\Scoreboard\Extensions\Godmode;
@@ -82,6 +83,7 @@ class Utils {
         if (Main::$options["RankSystem"] === true) $string = str_replace(["{rank}", "{prefix}"], [RankSystem::getPlayerRank($player), RankSystem::getPlayerPrefix($player)], $string);
         if (Main::$options["MultiServerCounter"] === true) $string = str_replace(["{MultiServer.online}", "{MultiServer.Maxonline}"], [MultiServerCounter::getPlayerCount(), MultiServerCounter::getMaxPlayerCount()], $string);
         if (Main::$options["Godmode"] === true) $string = str_replace(["{god}"], [Godmode::isPlayerGod($player)], $string);
+        if (Main::$options["FactionMaster"] === true) $string = str_replace(["{faction_name}", "{faction_rank}", "{faction_power}", "{faction_level}", "{faction_xp}", "{faction_message}", "{faction_description}", "{faction_visibility}"], [FactionMaster::getPlayerFaction($player), FactionMaster::getPlayerRank($player), FactionMaster::getFactionPower($player), FactionMaster::getFactionLevel($player), FactionMaster::getFactionXp($player), FactionMaster::getFactionMessage($player), FactionMaster::getFactionDescription($player), FactionMaster::getFactionVisibility($player)], $string);
         return $string;
     }
 
