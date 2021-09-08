@@ -60,7 +60,7 @@ options:
   # {god}
   Godmode: false
 
-# BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale}
+# BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale} {date}
 
 per_world: false
 title: "§6Scoreboard"
@@ -89,5 +89,8 @@ disable: "§cDisable"
 # Put on true only if you have activated an Economy Support and if you want to convert the money text (Ex: 100000 = 100K 1000000 = 1M 1000000000 = 1B)
 # Support : EconomyAPI, MultiEconomy, BankUI, CoinsSystem
 convert_money: false
+
+# Here, you can change the date format. All formats are available here https://www.php.net/manual/fr/datetime.format.php
+date_format: "m/d/Y"
 
 ...

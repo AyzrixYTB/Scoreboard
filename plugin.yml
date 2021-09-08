@@ -1,7 +1,7 @@
 name: Scoreboard
 main: Ayzrix\Scoreboard\Main
 api: 3.0.0
-version: 1.5.4
+version: 1.5.5
 softdepend:
   - PiggyFactions
   - FactionsPro
