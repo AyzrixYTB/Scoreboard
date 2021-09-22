@@ -34,7 +34,7 @@
 | RankSystem            | `{rank}` `{prefix}`                                                                                   | [Download](https://poggit.pmmp.io/p/RankSystem)                                                                                                           |
 | MultiServerCounter    | `{MultiServer.online}` `{MultiServer.Maxonline}`                                                      | [Download](https://poggit.pmmp.io/p/MultiServerCounter)                                                                                                   |
 | Godmode               | `{god}`                                                                                               | [Download](https://poggit.pmmp.io/p/Godmode)                                                                                                              |
-| FactionMaster         | `{faction_name}` `{faction_rank}` `{faction_power}` `{faction_level}` `{faction_xp}` `{faction_message}` `{faction_description}` `{faction_visibility}    | [Download](https://poggit.pmmp.io/p/FactionMaster)                                                    |
+| FactionMaster         | `{faction_name}` `{faction_rank}` `{faction_power}` `{faction_level}` `{faction_xp}` `{faction_message}` `{faction_description}` `{faction_visibility}`    | [Download](https://poggit.pmmp.io/p/FactionMaster)                                                    |
 ## Config
 ```
 #     _____                    _                         _
