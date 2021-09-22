@@ -1,7 +1,7 @@
 name: Scoreboard
 main: Ayzrix\Scoreboard\Main
 api: 3.0.0
-version: 1.5.5
+version: 1.5.6
 softdepend:
   - PiggyFactions
   - FactionsPro
@@ -28,4 +28,4 @@ softdepend:
   - Godmode
   - FactionMaster
 author: Ayzrix
-mcpe-protocol: [407, 408, 419, 422, 428, 431, 440, 441, 448]
+mcpe-protocol: [407, 408, 419, 422, 428, 431, 440, 441, 448, 465]
