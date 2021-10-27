@@ -62,7 +62,7 @@ options:
   # {faction_name} {faction_rank} {faction_power} {faction_level} {faction_xp} {faction_message} {faction_description} {faction_visibility}
   FactionMaster: false
 
-# BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale} {date}
+# BASE VARIABLES : {ping} {tps} {name} {online} {max_online} {level} {x} {y} {z} {ip} {port} {uid} {xuid} {health} {max_health} {food} {max_food} {gamemode} {scale} {date} {xplevel}
 
 per_world: false
 title: "§6Scoreboard"
